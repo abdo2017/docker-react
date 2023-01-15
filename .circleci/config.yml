@@ -1,0 +1,10 @@
+sudo: required
+
+servcies:
+  - docker
+
+before_install:
+  - docker build -t abdoesam2011/docker-react -f Dockerfile.dev . # returns ID for the container
+
+script:
+  - docker run abdoesam2011/docker-react npm run test -- --coverage

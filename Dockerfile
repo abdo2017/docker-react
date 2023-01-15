@@ -5,6 +5,7 @@
 # node image
 # copy package.json first and run install so we don't have to do this step
 # everytime there is a change in the project files.
+
 FROM node:18-alpine as builder
 WORKDIR '/app'
 COPY package.json .
